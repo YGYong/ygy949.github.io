@@ -2,7 +2,7 @@
   "name": "my_react_ts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ygyong.github.io/ygy949.github.io",
+  "homepage": "./",
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@reduxjs/toolkit": "^2.2.5",
@@ -28,8 +28,8 @@
   "scripts": {
     "start": "craco start",
     "test": "craco test",
+    "build": "craco build",
     "eject": "react-scripts eject",
-    "build": "react-scripts build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
