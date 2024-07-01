@@ -1,4 +1,4 @@
-import "./index.less"
+import "./index.less";
 export default function HeaderIndex() {
   const features = [
     { title: "首页" },
@@ -11,7 +11,7 @@ export default function HeaderIndex() {
     <div className="header_page">
       <div className="header_page_container">
         {features.map((item) => (
-          <div className="header_page_featrue">{item.title}</div>
+          <div className="header_page_featrue" key={item.title}>{item.title}</div>
         ))}
       </div>
     </div>
