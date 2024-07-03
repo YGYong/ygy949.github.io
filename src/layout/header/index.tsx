@@ -33,7 +33,7 @@ export default function HeaderIndex() {
             }}
           />
         </Col>
-        <Col span={8} offset={12}>
+        <Col span={4} offset={16}>
           <div className="fun_icons">
             <SkinIcon></SkinIcon>
             <ScreenIcon></ScreenIcon>

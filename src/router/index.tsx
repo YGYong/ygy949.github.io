@@ -12,6 +12,11 @@ const router = createHashRouter([
     path: "/",
     element: <Layout></Layout>,
     children: [
+      // Custom redirect function
+      {
+        path: "/",
+        element: <Navigate to="/home" />,
+      },
       {
         path: "/home",
         element: <Home></Home>,
@@ -31,11 +36,6 @@ const router = createHashRouter([
       {
         path: "/tool",
         element: <Tool></Tool>,
-      },
-      // Custom redirect function
-      {
-        path: "/",
-        element: <Navigate to="/home" />,
       },
     ],
   },

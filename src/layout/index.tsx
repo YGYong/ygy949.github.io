@@ -13,16 +13,20 @@ export default function LayoutIndex() {
   });
   return (
     <Layout style={{ height: "100%" }}>
+      {/* 侧边栏 */}
       <Sider collapsible trigger={null} collapsed={headerStore.isCollapsed}>
         <AsideIndex></AsideIndex>
       </Sider>
       <Layout>
+        {/* 头部内容 */}
         <Header style={{ padding: 0, background: "#fff" }}>
           <HeaderIndex></HeaderIndex>
         </Header>
+        {/* 主体内容 */}
         <Content>
           <Outlet></Outlet>
         </Content>
+        {/* 底部内容 */}
         <Footer style={{ textAlign: "center" }}>
           <FooterIndex></FooterIndex>
         </Footer>

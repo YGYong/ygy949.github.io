@@ -1,12 +1,66 @@
 .header_page {
-  // font-size: 24px;
-  // display: flex;
   .fun_icons {
     display: flex;
     justify-content: space-evenly;
     .screen_use_page,
     .skin_use_page {
-      font-size: 18px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .avatar_use_page {
+      cursor: pointer;
+    }
+  }
+}
+// 鼠标触碰头像后的样式
+.user_info_popover {
+  .user_info {
+    .user_info_item {
+      transition: background-color 0.3s;
+      padding: 5px 8px;
+    }
+    .user_info_item:hover {
+      background-color: rgb(114, 211, 244);
+    }
+  }
+  .user_info:hover {
+    cursor: pointer;
+  }
+}
+// 侧边抽屉样式
+.drawer_auto {
+  .theme_disposition {
+    background: #e9e5e5;
+    padding: 1px 15px 20px;
+    border-radius: 15px;
+    .theme_color {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .every_bgc {
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+      }
+    }
+    .custom_theme {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      span {
+        margin-right: 15px;
+      }
+    }
+    .reset_theme {
+      text-align: center;
+      width: 50%;
+      padding: 10px 5px;
+      border-radius: 12px;
+      background-color: #6daef1;
+      color: #fff;
+      margin-top: 10px;
+      transform: translate(42%, 0);
+      font-size: 16px;
     }
   }
 }
