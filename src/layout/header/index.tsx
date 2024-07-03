@@ -1,19 +1,46 @@
+// import React, { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { changeCollapsed } from "@/store/header";
 import "./index.less";
+import { Button, Col, Row } from "antd";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import AvatarIcon from "./components/Avatar";
+import ScreenIcon from "./components/FullScreen";
+import SkinIcon from "./components/Skin";
 export default function HeaderIndex() {
-  const features = [
-    { title: "首页" },
-    { title: "功能" },
-    { title: "关于" },
-    { title: "联系我们" },
-    { title: "我的" },
-  ];
+  const dispatch = useDispatch();
+  const headerStore = useSelector((state: any) => {
+    return state.headerReducer;
+  });
   return (
     <div className="header_page">
-      <div className="header_page_container">
-        {features.map((item) => (
-          <div className="header_page_featrue" key={item.title}>{item.title}</div>
-        ))}
-      </div>
+      <Row>
+        <Col span={4}>
+          <Button
+            type="text"
+            icon={
+              headerStore.isCollapsed ? (
+                <MenuUnfoldOutlined />
+              ) : (
+                <MenuFoldOutlined />
+              )
+            }
+            onClick={() => dispatch(changeCollapsed())}
+            style={{
+              fontSize: "16px",
+              width: 64,
+              height: 64,
+            }}
+          />
+        </Col>
+        <Col span={8} offset={12}>
+          <div className="fun_icons">
+            <SkinIcon></SkinIcon>
+            <ScreenIcon></ScreenIcon>
+            <AvatarIcon></AvatarIcon>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 }

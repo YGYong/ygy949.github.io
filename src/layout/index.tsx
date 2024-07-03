@@ -1,20 +1,32 @@
-// import { Outlet } from "react-router-dom";
+// import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import AsideIndex from "./aside";
 import HeaderIndex from "./header";
+import FooterIndex from "./footer";
 import { Layout } from "antd";
 import { Outlet } from "react-router-dom";
-const { Header, Footer, Content } = Layout;
-export function LayoutIndex() {
+const { Header, Sider, Footer, Content } = Layout;
+export default function LayoutIndex() {
+  // 获取header store里的值
+  const headerStore = useSelector((state:any) =>{
+    return state.headerReducer
+  });
   return (
-    <div>
+    <Layout style={{ height: "100%" }}>
+      <Sider collapsible trigger={null} collapsed={headerStore.isCollapsed}>
+        <AsideIndex></AsideIndex>
+      </Sider>
       <Layout>
-        <Header style={{ backgroundColor: "red" }}>
+        <Header style={{ padding: 0, background: "#fff" }}>
           <HeaderIndex></HeaderIndex>
         </Header>
         <Content>
-            <Outlet></Outlet>
+          <Outlet></Outlet>
         </Content>
-        <Footer>底部功能</Footer>
+        <Footer style={{ textAlign: "center" }}>
+          <FooterIndex></FooterIndex>
+        </Footer>
       </Layout>
-    </div>
+    </Layout>
   );
 }

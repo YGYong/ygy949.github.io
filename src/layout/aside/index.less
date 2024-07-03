@@ -1,0 +1,25 @@
+.aside_page {
+  .logo_menu {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+    height: 50px;
+    padding: 5px;
+    img {
+      height: 100%;
+      animation: spin 5s linear infinite;
+    }
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
