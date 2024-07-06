@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/167.5813d28b.chunk.js","mappings":"qJAAe,SAASA,IACtB,OAAOC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,YACd,C","sources":["views/tool/index.tsx"],"sourcesContent":["export default function ToolPage() {\r\n  return <div>ToolPage</div>;\r\n}\r\n"],"names":["ToolPage","_jsx","children"],"sourceRoot":""}

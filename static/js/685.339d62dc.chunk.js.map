@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/685.339d62dc.chunk.js","mappings":"qJAAe,SAASA,IACtB,OAAOC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,kBACd,C","sources":["views/connection/index.tsx"],"sourcesContent":["export default function ConnectionPage() {\r\n  return <div>ConnectionPage</div>;\r\n}\r\n"],"names":["ConnectionPage","_jsx","children"],"sourceRoot":""}

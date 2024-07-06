@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_react_ts=self.webpackChunkmy_react_ts||[]).push([[608],{5608:(e,t,r)=>{r.r(t),r.d(t,{default:()=>u});var s=r(3446);function u(){return(0,s.jsx)("div",{children:"AboutPage"})}}}]);
+//# sourceMappingURL=608.721d40b2.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/608.721d40b2.chunk.js","mappings":"qJAAe,SAASA,IACpB,OAAOC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,aACd,C","sources":["views/about/index.tsx"],"sourcesContent":["export default function AboutPage() {\r\n    return <div>AboutPage</div>;\r\n  }\r\n  "],"names":["AboutPage","_jsx","children"],"sourceRoot":""}
