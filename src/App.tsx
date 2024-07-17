@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <ConfigProvider theme={themeStore.theme}>
         <RouterProvider router={router} />
-      </ConfigProvider>
+      </ConfigProvider >
     </div>
   );
 }

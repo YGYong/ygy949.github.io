@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cesium Example</title>
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+    <script>
+      let a = {
+        result:
+          '[{"uri":"content:\\/\\/com.android.providers.media.documents\\/document\\/image%3A42571","type":"image\\/png","path":"\\/storage\\/emulated\\/0\\/XiaoJi\\/Roms\\/FC\\/7100133\\/7100133.00a.png","flag":67,"isCopy":false,"name":"7100133.00a.png","fileSize":13104}]',
+      };
+      console.log(JSON.parse(a.result)[0].path);
+      console.log(a);
+    </script>
+  </body>
+</html>

@@ -21,6 +21,6 @@
     },
     "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.less"],
   "exclude": ["node_modules", "dist", "**/*.js"]
 }

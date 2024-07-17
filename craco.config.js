@@ -34,6 +34,20 @@ module.exports = {
     postcss: {
       plugins: [require("tailwindcss"), require("autoprefixer")],
     },
+    lessOptions: {
+      javascriptEnabled: true,
+    },
+    // less: {
+    //   loaderOptions: {
+    //     lessOptions: {
+    //       javascriptEnabled: true,
+    //       modifyVars: {
+    //         // customize Antd theme variables here
+    //         // https://ant.design/docs/react/customize-theme
+    //       },
+    //     },
+    //   },
+    // },
   },
   plugins: [
     {
