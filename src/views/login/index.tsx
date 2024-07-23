@@ -1,6 +1,7 @@
 import { useState, startTransition, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Checkbox, Form, Input, message, Spin } from "antd";
+import NProgress from "@/config/nprogress";
 import "./index.less";
 
 type FieldType = {
@@ -8,7 +9,6 @@ type FieldType = {
   password?: string;
   remember?: string;
 };
-
 export default function LoginPage() {
   // 判断账号密码是否正确
   const [formSuccess, setFormSuccess] = useState(false);
@@ -38,6 +38,7 @@ export default function LoginPage() {
         console.log("Received values from form:", values);
         if (values.username === "admin" && values.password === "123456") {
           setSpinLoading(true);
+          NProgress.start();
           if (values.remember) {
             localStorage.setItem("loginUsername", "admin");
             localStorage.setItem("loginPassword", "123456");
@@ -49,6 +50,7 @@ export default function LoginPage() {
             setTimeout(() => {
               message.info("登录成功！");
               setSpinLoading(false);
+              NProgress.done();
               navigate("/ygyong/home");
             }, 1500);
           });
@@ -61,6 +63,7 @@ export default function LoginPage() {
         console.log("Failed to submit form:", errorInfo);
       });
   };
+  
   return (
     <div className="login_container">
       <div className="login-wrapper">
